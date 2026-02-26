@@ -43,12 +43,18 @@ const Sidebar = ({ sidebar, setSidebarOpen, activeTab, setActiveTab }) => {
                 setSidebarOpen(false);
               }}
             >
+              {/* Conditional rendering */}
+              {activeTab === item.id && (
+                <div
+                  className={`absolute inset-0 bg-gradient-to-r ${item.gradient} opacity-30 rounded-2xl`}
+                ></div>
+              )}
               <div
-                className={`p-2 rounded-xl bg-gradient-to-r mr-4 group-hover:scale-110 transition-all duration-300 relative z-10`}
+                className={`p-2 rounded-xl bg-gradient-to-r ${item.gradient} mr-4 group-hover:scale-110 transition-all duration-300 relative z-10`}
               >
-                Item Icon
+                <item.icon className="h-5 w-5 text-white" />
               </div>
-              <span className="font-semibold relative z-10">Item Label</span>
+              <span className="font-semibold relative z-10">{item.label}</span>
             </button>
           );
         })}
