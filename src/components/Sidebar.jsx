@@ -31,9 +31,18 @@ const Sidebar = ({ sidebar, setSidebarOpen, activeTab, setActiveTab }) => {
         {/* Menu items will go here using Map method */}
         {menuItems.map((item) => {
           return (
-            <button className="w-full flex items-center px-6 py-4 text-left rounded-2xl transition-all duration-300 group relative overflow-hidden">
-              {/* Conditional Rendering*/}
-              {/* <div className={`absolute inset-0 bg-gradient-to-r opacity-30 rounded-2xl`}></div> */}
+            <button
+              key={item.id}
+              className={`w-full flex items-center px-6 py-4 text-left rounded-2xl transition-all duration-300 group relative overflow-hidden ${
+                activeTab === item.id
+                  ? "bg-white/20 text-white shadow-2xl scale-105"
+                  : "text-white/70 hover:text-white hover:bg-white/10 hover:scale-105"
+              }`}
+              onClick={() => {
+                setActiveTab(item.id);
+                setSidebarOpen(false);
+              }}
+            >
               <div
                 className={`p-2 rounded-xl bg-gradient-to-r mr-4 group-hover:scale-110 transition-all duration-300 relative z-10`}
               >
