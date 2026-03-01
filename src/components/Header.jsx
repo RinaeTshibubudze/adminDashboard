@@ -1,19 +1,29 @@
 import { Bell, ChevronDown, Menu, Search } from "lucide-react";
 import React from "react";
 
-const Header = () => {
+const Header = ({ activeTab, setSidebarOpen, currentTime }) => {
   return (
     <div className="bg-white/10 backdrop-blur-xl border-b border-white/20 px-8 py-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-6">
-          <button className="lg:hidden text-white/10 hover:text-white/20 p-2 rounded-xl hover:bg-white/10 transition-all">
+          <button
+            className="lg:hidden text-white/10 hover:text-white/20 p-2 rounded-xl hover:bg-white/10 transition-all"
+            onClick={() => setSidebarOpen(true)}
+          >
             <Menu className="h-6 w-6" />
           </button>
           <div>
             <h2 className="text-3xl font-bold bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent capitalize">
-              Active Tab
+              {activeTab}
             </h2>
-            <p className="text-white text-sm mt-1">Date</p>
+            <p className="text-white text-sm mt-1">
+              {currentTime.toLocaleDateString("en-US", {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </p>
           </div>
         </div>
 
