@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Sidebar from "./components/Sidebar";
+import Header from "./components/Header";
 
 const App = () => {
   const [sidebar, setSidebarOpen] = useState(false);
@@ -14,8 +15,10 @@ const App = () => {
           activeTab={activeTab}
           setActiveTab={setActiveTab}
         />
+        <div className="flex-1 flex flex-col overflow-hidden">
+          <Header />
+        </div>
       </div>
-      App
     </div>
   );
 };
