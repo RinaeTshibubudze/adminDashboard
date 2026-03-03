@@ -5,6 +5,8 @@ import MetricCard from "./components/MetricCard";
 import { DollarSign, Target, Users, Zap } from "lucide-react";
 import RevenueAnalytics from "./components/RevenueAnalytics";
 import LiveActivityFeed from "./components/LiveActivityFeed";
+import TrafficSource from "./components/TrafficSource";
+import SystemPerformance from "./components/SystemPerformance";
 
 const App = () => {
   const [sidebar, setSidebarOpen] = useState(false);
@@ -86,6 +88,11 @@ const App = () => {
 
               {/* Live Activity */}
               <LiveActivityFeed />
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Traffic Sources */}
+              <TrafficSource />
+              <SystemPerformance />
             </div>
           </main>
         </div>
