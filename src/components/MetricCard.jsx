@@ -22,7 +22,7 @@ const MetricCard = ({
           <div
             className={`p-4 rounded-2xl bg-gradient-to-r ${gradient} group-hover:scale-110 transition duration-300 shadow-lg`}
           >
-            <Icon className="text-white w-8 h-8" />
+            {Icon && <Icon className="text-white w-8 h-8" />}
           </div>
           <div
             className={`flex items-center space-x-1 px-3 py-1 rounded-full text-sm font-bold`}
@@ -53,7 +53,7 @@ const MetricCard = ({
           return (
             <div
               key={index}
-              className={`bg-gradient-to-r ${gradient} rounded-sm opacity-60 group-hover:opacity-1005 transition-all duration-300`}
+              className={`bg-gradient-to-r ${gradient} rounded-sm opacity-60 group-hover:opacity-100 transition-all duration-300`}
               style={{
                 height: `${(point / Math.max(...trend)) * 100}%`,
                 width: "8px",

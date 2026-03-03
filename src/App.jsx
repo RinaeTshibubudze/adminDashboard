@@ -3,6 +3,8 @@ import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import MetricCard from "./components/MetricCard";
 import { DollarSign, Target, Users, Zap } from "lucide-react";
+import RevenueAnalytics from "./components/RevenueAnalytics";
+import LiveActivityFeed from "./components/LiveActivityFeed";
 
 const App = () => {
   const [sidebar, setSidebarOpen] = useState(false);
@@ -76,6 +78,14 @@ const App = () => {
                 subtitle="System health"
                 trend={[28, 32, 35, 41, 38, 44]}
               />
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {/* Revenue Analysis */}
+              <RevenueAnalytics />
+
+              {/* Live Activity */}
+              <LiveActivityFeed />
             </div>
           </main>
         </div>
