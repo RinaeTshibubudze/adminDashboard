@@ -14,16 +14,16 @@ import {
 export const revenueData = [
   { month: "Jan", revenue: 85000, users: 1200, growth: 12.5 },
   { month: "Feb", revenue: 90000, users: 1300, growth: 8.3 },
-  { month: "Mar", revenue: 95000, users: 1400, growth: 5.6 },
+  { month: "Mar", revenue: 125000, users: 1400, growth: 5.6 },
   { month: "Apr", revenue: 100000, users: 1500, growth: 5.3 },
   { month: "May", revenue: 110000, users: 1600, growth: 10.0 },
-  { month: "Jun", revenue: 120000, users: 1700, growth: 9.1 },
+  { month: "Jun", revenue: 120000, users: 9700, growth: 9.1 },
   { month: "Jul", revenue: 130000, users: 1800, growth: 8.3 },
-  { month: "Aug", revenue: 140000, users: 1900, growth: 7.7 },
+  { month: "Aug", revenue: 100000, users: 1900, growth: 7.7 },
   { month: "Sep", revenue: 150000, users: 2000, growth: 7.1 },
   { month: "Oct", revenue: 160000, users: 2100, growth: 6.7 },
   { month: "Nov", revenue: 170000, users: 2200, growth: 6.3 },
-  { month: "Dec", revenue: 180000, users: 2300, growth: 5.9 },
+  { month: "Dec", revenue: 190000, users: 9000, growth: 5.9 },
 ];
 
 export const performanceData = [
